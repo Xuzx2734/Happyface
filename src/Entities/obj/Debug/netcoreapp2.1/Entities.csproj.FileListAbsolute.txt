@@ -1,0 +1,14 @@
+H:\workspace\Dotnet_Core\KB\src\Entities\bin\Debug\netcoreapp2.1\Entities.deps.json
+H:\workspace\Dotnet_Core\KB\src\Entities\bin\Debug\netcoreapp2.1\Entities.dll
+H:\workspace\Dotnet_Core\KB\src\Entities\bin\Debug\netcoreapp2.1\Entities.pdb
+H:\workspace\Dotnet_Core\KB\src\Entities\bin\Debug\netcoreapp2.1\Microsoft.EntityFrameworkCore.dll
+H:\workspace\Dotnet_Core\KB\src\Entities\bin\Debug\netcoreapp2.1\Newtonsoft.Json.dll
+H:\workspace\Dotnet_Core\KB\src\Entities\bin\Debug\netcoreapp2.1\Microsoft.EntityFrameworkCore.xml
+H:\workspace\Dotnet_Core\KB\src\Entities\bin\Debug\netcoreapp2.1\Newtonsoft.Json.xml
+H:\workspace\Dotnet_Core\KB\src\Entities\obj\Debug\netcoreapp2.1\Entities.csprojAssemblyReference.cache
+H:\workspace\Dotnet_Core\KB\src\Entities\obj\Debug\netcoreapp2.1\Entities.csproj.CoreCompileInputs.cache
+H:\workspace\Dotnet_Core\KB\src\Entities\obj\Debug\netcoreapp2.1\Entities.AssemblyInfoInputs.cache
+H:\workspace\Dotnet_Core\KB\src\Entities\obj\Debug\netcoreapp2.1\Entities.AssemblyInfo.cs
+H:\workspace\Dotnet_Core\KB\src\Entities\obj\Debug\netcoreapp2.1\Entities.csproj.CopyComplete
+H:\workspace\Dotnet_Core\KB\src\Entities\obj\Debug\netcoreapp2.1\Entities.dll
+H:\workspace\Dotnet_Core\KB\src\Entities\obj\Debug\netcoreapp2.1\Entities.pdb
