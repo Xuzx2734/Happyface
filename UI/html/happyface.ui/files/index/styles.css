@@ -7,7 +7,7 @@ body {
     margin-right: 0;
     text-align: left;
 }
-
+a{ text-decoration:none} 
 #base {
     position: absolute;
     z-index: 0;
