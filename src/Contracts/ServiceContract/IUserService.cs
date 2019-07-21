@@ -7,10 +7,10 @@ namespace Contracts.ServiceContract
 {
     public interface IUserService
     {
-        FY_User GetUserByAccount(string userAccount);
+        UsersModel GetUserByAccount(string userAccount);
 
-        FY_User GetUserById(Guid userGuid);
+        IEnumerable<UsersModel> GetAllUsers();
 
-        IEnumerable<FY_User> GetAllUsers();
+        void AddUser();
     }
 }

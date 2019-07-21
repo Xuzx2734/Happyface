@@ -11,7 +11,7 @@ namespace CoreWeb.ServiceConfig
     {
         public AutoMapperProfileConfig()
         {
-            CreateMap<FY_User, UserModelDto>();
+            //CreateMap<FY_User, UserModelDto>();
         }
     }
 }

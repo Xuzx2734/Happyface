@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Contracts
 {
-    public interface IUserRepository : IRepositoryBase<FY_User>
+    public interface IUserRepository : IRepositoryBase<UsersModel>
     {
     }
 }

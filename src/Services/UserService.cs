@@ -12,45 +12,49 @@ namespace Services
     public class UserService : IUserService
     {
         private IRepositoryWrapper _repoWrapper;
-        private CoreContext _db;
+        private RepositoryContext _db;
 
-        public UserService(IRepositoryWrapper repoWrapper, CoreContext db)
+        public UserService(IRepositoryWrapper repoWrapper, RepositoryContext db)
         {
             _repoWrapper = repoWrapper;
             _db = db;
         }
 
-        public FY_User GetUserByAccount(string userAccount)
+        public IEnumerable<UsersModel> GetAllUsers()
         {
-            //var query = from x in _db.FY_User.Where(x => x.UserAccount == userAccount)
-            //            select x;
-            //var user = query.FirstOrDefault();
-            //return query.FirstOrDefault();
-
-            return null;
+            var users =  _db.Users.ToList();
+            return users;
         }
 
-        public FY_User GetUserById(Guid userGuid)
+        public UsersModel GetUserByAccount(string userAccount)
         {
-            //var query = from x in _db.FY_User.Where(x => x.UserId == userGuid)
-            //            select x;
-
-            //var user = query.FirstOrDefault();
-            //return user;
             throw new NotImplementedException();
         }
 
-        public IEnumerable<FY_User> GetAllUsers()
+        public void AddUser()
         {
-            //var query = from x in _db.FY_User
-            //            select x;
+            ///测试例子
+            var user = new UsersModel()
+            {
+                userid_ = new Random().Next(0,100),
+                code_ = "111",
+                delflag_ = 0,
+                idate_ = DateTime.Now,
+                name_ = "test",
+                pass_ = "123456",
+                udate_ = DateTime.Now
+            };
 
-            //var list = query.ToList();
+            _db.Users.Add(user);
+            var count = _db.SaveChanges();
 
-            //return list;
-            throw new NotImplementedException();
+            var dbUser = _db.Users.Where(x => x.userid_ == 1).First();
+            dbUser.pass_ = "123456";
+            _db.Users.Update(dbUser);
 
+            count += _db.SaveChanges();
+            
         }
-
+        
     }
 }

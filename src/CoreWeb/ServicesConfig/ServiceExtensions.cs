@@ -73,7 +73,6 @@ namespace CoreWeb.ServiceConfig
             if (optionBuilder == null) throw new Exception("sqlconnection need to config in appsettings.json");
 
             ////if you want to register multiple context type here , you should use generic context parameter in your ctor.           
-            services.AddDbContext<CoreContext>(optionBuilder);
             services.AddDbContext<RepositoryContext>(optionBuilder);
         }
 

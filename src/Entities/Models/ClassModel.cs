@@ -6,31 +6,36 @@ using System.Text;
 
 namespace Entities.Models
 {
-    [Table("class")]
-    public class ClassModel
+    [Table("t_class")]
+    public sealed class ClassModel
     {
         [Key]
-        [Column("id")]
-        public int ClassId { get; set; }
-
+        public int classid_ { get; set; }
+        /// <summary>
+        /// 父目录id
+        /// </summary>
         [Required]
-        public int pid { get; set; }
-
+        public int pid_ { get; set; }
+        /// <summary>
+        /// 目录名称
+        /// </summary>
         [Required]
         [StringLength(30)]
-        public string name { get; set; }
+        public string name_ { get; set; }
 
         [Required]
-        public int sort { get; set; }
+        public int sort_ { get; set; }
 
         [Required]
-        public DateTime idate { get; set; }
+        public DateTime idate_ { get; set; }
 
         [Required]
-        public DateTime udate { get; set; }
+        public DateTime udate_ { get; set; }
 
         [Required]
-        public int delflag { get; set; }
-
+        public int delflag_ { get; set; }
+        
+        public ICollection<DocModel> Docs { get; set; }
+                
     }
 }

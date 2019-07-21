@@ -96,8 +96,9 @@ namespace CoreWeb
                 app.ConfigGlobalExceptionHandler();
                 app.UseHsts();
             }
+            
 
-            app.UseSession();
+            //app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();

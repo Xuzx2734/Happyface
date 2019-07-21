@@ -26,6 +26,8 @@ namespace CoreWeb.Controllers
         public IActionResult Index()
         {
             //_logger.LogInfo("index");
+            var list = _userService.GetAllUsers();
+            _userService.AddUser();
             return View();
         }
         
