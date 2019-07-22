@@ -48,8 +48,7 @@ namespace Entities.Models
         /// </summary>
         [Required]
         public int delflag_ { get; set; }
-
-        public int testcols { get; set; }
+        
 
         public ICollection<UserGroupModel> UserGroups { get; set; }
 
