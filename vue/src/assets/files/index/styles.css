@@ -9,26 +9,9 @@ body {
 }
 a{ text-decoration:none} 
 #base {
-    position: absolute;
     z-index: 0;
-
 }
 
-#u0_img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-}
-
-#u0 {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 1024px;
-    height: 768px;
-}
 
 #u1 {
     position: absolute;
@@ -48,22 +31,18 @@ a{ text-decoration:none}
 }
 
 #u3 {
-    position: absolute;
-    left: 104px;
-    top: 87px;
     word-wrap: break-word;
-    width: 283px;
+    width: 183px;
     height: 36px;
     font-family: '微软雅黑 Bold', '微软雅黑';
     font-weight: 700;
     font-style: normal;
     font-size: 28px;
     color: #FFFFFF;
-    text-align: left;
-}
+    text-align: center;
+    }
 
 #u4_img {
-    position: absolute;
     left: 138px;
     top: 0px;
     width: 87px;
@@ -71,9 +50,7 @@ a{ text-decoration:none}
 }
 
 #u4 {
-    position: fixed;
-    left: 36%;
-    top: 30%;
+    padding-top: 200px;
     width: 380px;
     height: 328px;
 }
@@ -87,17 +64,8 @@ a{ text-decoration:none}
     word-wrap: break-word;
 }
 
-#u6_img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 365px;
-    height: 36px;
-}
 
 #u6 {
-    position: absolute;
-    left: 0px;
     top: 150px;
     word-wrap: break-word;
     height: 36px;
@@ -106,7 +74,7 @@ a{ text-decoration:none}
     font-style: normal;
     font-size: 28px;
     color: #FFFFFF;
-    text-align: left;
+    text-align: center;
 }
 
 #u7 {
@@ -118,19 +86,21 @@ a{ text-decoration:none}
 }
 
 #u8_img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
+    margin-left: 40px;
+    width: 103px;
+    height: 38px;
+    float: left;
+}
+#u10_img {
+    float: right;
+    margin-right: 40px;
     width: 103px;
     height: 38px;
 }
-
 #u8 {
-    position: absolute;
-    left: 40px;
-    top: 260px;
-    width: 103px;
+    width: 380px;
     height: 38px;
+    margin-top: 60px;
     font-family: '微软雅黑';
     font-weight: 400;
     font-style: normal;
@@ -146,16 +116,9 @@ a{ text-decoration:none}
     cursor: pointer;
 }
 
-#u10_img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 103px;
-    height: 38px;
-}
+
 
 #u10 {
-    position: absolute;
     right: 40px;
     top: 260px;
     width: 103px;

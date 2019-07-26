@@ -1,9 +1,9 @@
 <template>
-        <div id="base" class="">
-            <div id="u18" class="ax_default _形状" data-label="Rectangle">
-                <img id="u18_img" class="img " src="../assets/images/login/rectangle_u18.png" />
+        <center id="base" class="">
+            <div id="u18" class="ax_default _形状" 
+            data-label="Rectangle">
                 <p id="u20"><span>登录</span></p>
-                <p id="u27">
+                 <p id="u27">
                      <input type="text" name="username" lay-verify="title" 
                     autocomplete="off" placeholder="用户名/邮箱" 
                     class="layui-input">
@@ -21,12 +21,13 @@
                  <p id="u30">
                     <button type="button" class="layui-btn layui-btn-normal">登录</button>
                 </p>
-                <div id="u24" class="ax_default _形状" data-label="Link">
+                 <div id="u24" class="ax_default _形状" data-label="Link">
                     <p id="u25"><a href="register">注册新账号</a></p>
                     <p id="u26"><a href="#">忘记密码</a></p>
                 </div>
+                <img id="u18_img" class="img " src="../assets/images/login/rectangle_u18.png" />
             </div>
-        </div>
+        </center>
 </template>
 
 <script>
@@ -47,6 +48,5 @@
 </script>
 
 <style>
-    @import "../assets/layui/css/layui.css";
     @import "../assets/files/login/styles.css";
 </style>
