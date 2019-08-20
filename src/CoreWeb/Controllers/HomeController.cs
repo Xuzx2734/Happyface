@@ -27,7 +27,7 @@ namespace CoreWeb.Controllers
         {
             //_logger.LogInfo("index");
             var list = _userService.GetAllUsers();
-            _userService.AddUser();
+            //_userService.AddUser();
             return View();
         }
         

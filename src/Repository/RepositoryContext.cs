@@ -3,11 +3,18 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Entities.Models;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Console;
 
 namespace Repository
 {
     public class RepositoryContext : DbContext
     {
+
+        //public static readonly ILoggerFactory loggerFactory = new LoggerFactory(new[] {
+        //      new ConsoleLoggerProvider((_, __) => true, true)
+        //});
+
         public RepositoryContext(DbContextOptions<RepositoryContext> options)
             : base(options)
         {
@@ -44,6 +51,15 @@ namespace Repository
             modelBuilder.Entity<ValuesModel>().ToTable("t_values");
 
         }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    var loggerFactory = new LoggerFactory();
+        //    loggerFactory.AddProvider(new EFLoggerProvider());
+        //    optionsBuilder.UseLoggerFactory(loggerFactory)
+        //        .EnableSensitiveDataLogging();
+        //    base.OnConfiguring(optionsBuilder);
+        //}
 
     }
 }

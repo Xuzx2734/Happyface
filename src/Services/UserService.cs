@@ -23,6 +23,9 @@ namespace Services
         public IEnumerable<UsersModel> GetAllUsers()
         {
             var users =  _db.Users.ToList();
+            var user = (from x in _db.Users
+                        where x.userid_ == 1
+                        select x).FirstOrDefault();
             return users;
         }
 

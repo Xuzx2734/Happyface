@@ -15,6 +15,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Contracts.ServiceContract;
 using System.Reflection;
+using Microsoft.Extensions.Logging;
 
 namespace CoreWeb.ServiceConfig
 {
@@ -59,13 +60,16 @@ namespace CoreWeb.ServiceConfig
             {
                 if (!string.IsNullOrEmpty(item.Value))
                 {
+                    var loggerFactory = new LoggerFactory();
+                    loggerFactory.AddProvider(new EFLoggerProvider());
+
                     if ("SqlServerconnectionstring".Equals(item.Key))
                     {
-                        optionBuilder = options => options.UseSqlServer(item.Value);
+                        optionBuilder = options => options.UseSqlServer(item.Value).UseLoggerFactory(loggerFactory);
                     }
                     else if ("MySqlconnectionstring".Equals(item.Key))
                     {
-                        optionBuilder = options => options.UseMySql(item.Value);
+                        optionBuilder = options => options.UseMySql(item.Value).UseLoggerFactory(loggerFactory);
                     }
                 }
             }
@@ -139,7 +143,7 @@ namespace CoreWeb.ServiceConfig
                 }
             }
         }
-
+       
         /// <summary>
         /// config automapper mapping relationship
         /// </summary>

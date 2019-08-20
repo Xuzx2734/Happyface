@@ -1,6 +1,7 @@
 FROM microsoft/dotnet:2.1-aspnetcore-runtime
 FROM microsoft/dotnet:2.1-sdk AS build
-COPY bin/Debug/netcoreapp2.1/publish/ ./
-EXPOSE 8082
-ENTRYPOINT dotnet /root/CoreWeb.dll
+WORKDIR /app
+COPY / .
+EXPOSE 8081
+
 ENTRYPOINT ["dotnet", "CoreWeb.dll"]
