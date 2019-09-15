@@ -126,7 +126,7 @@ namespace CoreWeb.ServiceConfig
 
             // if not declare DI above ; all interface will be DI under the  namespace of Contracts.ServiceContract
             var serviceList = services.Where(x => x.ServiceType.Namespace == "Contracts.ServiceContract").Select(x => x.ServiceType.Name).ToList();
-            if (serviceList.Any()){
+            //if (serviceList.Any()){
                 Assembly assembly = Assembly.Load("Contracts");
                 var serviceContractList = assembly.GetTypes().Where(x => x.Namespace == "Contracts.ServiceContract").ToList();
                 if (serviceContractList.Any())
@@ -137,10 +137,10 @@ namespace CoreWeb.ServiceConfig
                         var serviceType = serviceAssembly.GetType($"Services.{item.Name.Substring(1)}");
                         if(serviceType != null)
                         {
-                            services.AddTransient(item.GetType(), serviceType);
+                            services.AddTransient(assembly.GetType($"{item.Namespace}.{item.Name}"), serviceType);
                         }
                     }
-                }
+                //}
             }
         }
        

@@ -33,16 +33,7 @@ namespace CoreWeb
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseKestrel(options =>
-                {
-                    options.Listen(IPAddress.Loopback, 5000);
-                    options.Listen(IPAddress.Loopback, 5001, listenOptions =>
-                    {
-                        listenOptions.UseHttps("2590187_ccmtime.cn.pfx", "68rb98YU");
-                    });
-                })
-                 .UseUrls("http://localhost:5000", "https://localhost:5001")
-                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseKestrel()
                 .UseStartup<Startup>();
 
     }
