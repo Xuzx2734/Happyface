@@ -3,7 +3,7 @@ drop table if exists class;
 drop table if exists doc;
 
 drop table if exists groups;
-
+qwewqeqewq
 drop table if exists parameter;
 
 drop table if exists project;
